@@ -3,6 +3,11 @@ import json
 import os
 from sleeperpy import Leagues, User
 
+
+import requests
+from ui import UPlayerAPIClient
+
+
 from data_classes import (
     FinalOutput,
     Player,
@@ -11,15 +16,7 @@ from data_classes import (
 
 from sleeper.api.unofficial import UPlayerAPIClient
 
-from maxPF import (
-    get_current_max_pf,
-    get_remaining_max_pf,
-    get_player_projections_for_remaining_weeks,
-    get_roster_positions
-)
-
 from sleeper.enum import Sport
-
 
 score_settings_dict = {}
 
@@ -386,9 +383,6 @@ def calculate_championship_odds(maxPFs, standings):
     
     return final_odds
 
-
-import requests
-from ui import UPlayerAPIClient
 
 
 def get_current_max_pf(team, weeks_played, scoring_settings_dict, roster_positions):
