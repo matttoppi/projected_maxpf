@@ -5,7 +5,6 @@ from sleeperpy import Leagues, User
 
 
 import requests
-from ui import UPlayerAPIClient
 
 
 from data_classes import (
